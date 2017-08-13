@@ -1,4 +1,5 @@
 // @flow
+
 const { curry } = require('ramda')
 function uncurriedMap(
   cb /*: (v: mixed, i?: number, a?: mixed[]) => mixed*/,
