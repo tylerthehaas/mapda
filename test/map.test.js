@@ -3,7 +3,7 @@ const { expect } = require('chai')
 const { describe, it } = require('mocha')
 const sinon = require('sinon')
 
-const map = require('../src/map')
+const map = require('../lib/map')
 
 describe('map()', () => {
   it('Should call cb once for every key/value in Map', () => {

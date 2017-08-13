@@ -3,7 +3,7 @@
 const { expect } = require('chai')
 const { describe, it } = require('mocha')
 
-const fold = require('../src/fold')
+const fold = require('../lib/fold')
 
 describe('fold()', () => {
   it('Should import fold as a function', () => {
@@ -11,6 +11,9 @@ describe('fold()', () => {
   })
 
   it('Should throw error if cb not a function', () => {
-    expect(() => fold)
+    expect(() => fold('hello', new Map())).to.throw()
+    expect(() => fold(2, new Map())).to.throw()
+    expect(() => fold([ 1, 2, 3 ], new Map())).to.throw()
+    expect(() => fold({ foo: 1, bar: 2, baz: 'quix' }, new Map())).to.throw()
   })
 })

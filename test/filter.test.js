@@ -3,7 +3,7 @@ const { expect } = require('chai')
 const { describe, it } = require('mocha')
 const sinon = require('sinon')
 
-const filter = require('../src/filter')
+const filter = require('../lib/filter')
 
 describe('filter()', () => {
   it('Should import filter as a function successfully', () => {

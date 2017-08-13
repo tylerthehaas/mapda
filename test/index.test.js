@@ -3,7 +3,7 @@
 const { expect } = require('chai')
 const { describe, it } = require('mocha')
 
-const M = require('../src/index')
+const M = require('../lib/index')
 
 describe('M', () => {
   it('Should contain all functions in lib', () => {
