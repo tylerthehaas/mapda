@@ -1,5 +1,5 @@
 // @flow
 
-function fold() {}
+function fold(cb, inputMap) {}
 
 module.exports = fold

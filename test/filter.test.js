@@ -51,5 +51,8 @@ describe('filter()', () => {
 
   it('Should throw error if predicate not a function', () => {
     expect(() => filter('hello', new Map())).to.throw()
+    expect(() => filter(2, new Map())).to.throw()
+    expect(() => filter([ 1, 2, 3 ], new Map())).to.throw()
+    expect(() => filter({ foo: 1, bar: 2, baz: 'quix' }, new Map())).to.throw()
   })
 })
