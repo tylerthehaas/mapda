@@ -16,12 +16,18 @@ describe('map()', () => {
     expect(cb2.callCount).to.equal(2)
   })
 
-  it('Should change value of map', () => {
+  it('Should change value of target map', () => {
     const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
     const result = map(v => v + 1, myMap)
     const expected = new Map([ [ 'foo', 2 ], [ 'bar', 3 ], [ 'baz', 4 ] ])
-    console.log({ result, expected })
     expect(result).to.eql(expected)
+  })
+
+  it('Should return a new Map', () => {
+    const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
+    const expected = new Map([ [ 'foo', 2 ], [ 'bar', 3 ], [ 'baz', 4 ] ])
+    const result = map(v => v + 1, myMap)
+    expect(result).to.not.equal(expected)
   })
 
   it('Should return function when partially applied', () => {

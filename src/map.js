@@ -7,7 +7,7 @@ function uncurriedMap(
   for (const [ k, v ] of target) {
     target.set(k, cb(v))
   }
-  return target
+  return new Map([ ...target ])
 }
 
 const map = curry(uncurriedMap)
