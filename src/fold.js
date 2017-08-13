@@ -12,11 +12,9 @@ function fold(
   let result
   if (initialValue) result = initialValue
 
-  /*
   for (const [ k, v ] of inputMap) {
     result = cb(result, v, k)
   }
-  */
 
   return result
 }

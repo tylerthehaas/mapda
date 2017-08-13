@@ -23,4 +23,11 @@ describe('fold()', () => {
     const result = fold(cb, new Map(), 5)
     expect(result).to.equal(5)
   })
+
+  it('Should call cb for each key/value pair', () => {
+    const cb = sinon.spy()
+    const myMap = new Map([ [ 'foo', 5 ], [ { bar: 5 }, 'quix' ], [ () => {}, 7 ] ])
+    fold(cb, myMap)
+    expect(cb.callCount).to.equal(3)
+  })
 })
