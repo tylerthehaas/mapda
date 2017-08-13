@@ -48,4 +48,8 @@ describe('filter()', () => {
     const result = filter(v => v > 1)
     expect(result).to.be.an.instanceof(Function)
   })
+
+  it('Should throw error if predicate not a function', () => {
+    expect(() => filter('hello', new Map())).to.throw()
+  })
 })
