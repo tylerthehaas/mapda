@@ -4,8 +4,7 @@ function uncurriedMap(
   cb /*: (v: mixed, i?: number, a?: mixed[]) => mixed*/,
   _target /*: Map<*, *>*/
 ) /*: Map<*, *>*/ {
-  console.log(typeof cb)
-  if (typeof cb !== 'function' && cb !== _) throw new Error(
+  if (typeof cb !== 'function') throw new Error(
       `1st argument to map must be a function but received ${typeof cb}`
     )
   const target = new Map([ ..._target ])
