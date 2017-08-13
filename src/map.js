@@ -2,12 +2,13 @@
 const { curry } = require('ramda')
 function uncurriedMap(
   cb /*: (v: mixed, i?: number, a?: mixed[]) => mixed*/,
-  target /*: Map<*, *>*/
+  _target /*: Map<*, *>*/
 ) /*: Map<*, *>*/ {
+  const target = new Map([ ..._target ])
   for (const [ k, v ] of target) {
     target.set(k, cb(v))
   }
-  return new Map([ ...target ])
+  return target
 }
 
 const map = curry(uncurriedMap)

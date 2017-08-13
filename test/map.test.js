@@ -25,9 +25,10 @@ describe('map()', () => {
 
   it('Should return a new Map', () => {
     const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
-    const expected = new Map([ [ 'foo', 2 ], [ 'bar', 3 ], [ 'baz', 4 ] ])
     const result = map(v => v + 1, myMap)
-    expect(result).to.not.equal(expected)
+    const expected = new Map([ [ 'foo', 2 ], [ 'bar', 3 ], [ 'baz', 4 ] ])
+    expect(result).to.not.eql(myMap)
+    expect(result).to.eql(expected)
   })
 
   it('Should return function when partially applied', () => {
