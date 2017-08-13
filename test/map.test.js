@@ -35,4 +35,9 @@ describe('map()', () => {
     const result = map(v => v + 1)
     expect(result).to.be.an.instanceof(Function)
   })
+
+  it('Should throw error when cb is not a function', () => {
+    const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
+    expect(() => map(undefined, myMap)).to.throw()
+  })
 })
