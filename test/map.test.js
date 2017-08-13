@@ -25,7 +25,6 @@ describe('map()', () => {
   })
 
   it('Should return function when partially applied', () => {
-    const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
     const result = map(v => v + 1)
     expect(result).to.be.an.instanceof(Function)
   })
