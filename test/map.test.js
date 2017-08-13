@@ -5,8 +5,8 @@ const sinon = require('sinon')
 const map = require('../src/map')
 
 describe('map()', () => {
-  let myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
   it('Should call cb once for every key/value in Map', () => {
+    let myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
     const cb = sinon.spy()
     const cb2 = sinon.spy()
     map(cb, myMap)
@@ -17,8 +17,16 @@ describe('map()', () => {
   })
 
   it('Should change value of map', () => {
+    const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
     const result = map(v => v + 1, myMap)
     const expected = new Map([ [ 'foo', 2 ], [ 'bar', 3 ], [ 'baz', 4 ] ])
+    console.log({ result, expected })
     expect(result).to.eql(expected)
+  })
+
+  it('Should return function when partially applied', () => {
+    const myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])
+    const result = map(v => v + 1)
+    expect(result).to.be.an.instanceof(Function)
   })
 })

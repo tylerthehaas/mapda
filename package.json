@@ -28,6 +28,7 @@
     "sinon": "^3.2.0"
   },
   "dependencies": {
-    "eslint-plugin-flowtype": "^2.35.0"
+    "eslint-plugin-flowtype": "^2.35.0",
+    "ramda": "^0.24.1"
   }
 }

@@ -1,5 +1,6 @@
 // @flow
-function map(
+const { curry } = require('ramda')
+function uncurriedMap(
   cb /*: (v: mixed, i?: number, a?: mixed[]) => mixed*/,
   target /*: Map<*, *>*/
 ) /*: Map<*, *>*/ {
@@ -8,5 +9,7 @@ function map(
   }
   return target
 }
+
+const map = curry(uncurriedMap)
 
 module.exports = map
