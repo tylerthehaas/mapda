@@ -1,0 +1,33 @@
+{
+  "name": "es6-map-fn",
+  "version": "1.0.0",
+  "description": "A group of polyfills aimed at enabling working with Maps in a functional way possible.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "flow": "flow",
+    "prepublish": "npm run build",
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/haasDev/es6-map-fn.git"
+  },
+  "author": "Tyler Haas",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/haasDev/es6-map-fn/issues"
+  },
+  "homepage": "https://github.com/haasDev/es6-map-fn#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-flow": "^6.23.0",
+    "chai": "^4.1.1",
+    "flow-bin": "^0.52.0",
+    "mocha": "^3.5.0",
+    "sinon": "^3.2.0"
+  },
+  "dependencies": {
+    "eslint-plugin-flowtype": "^2.35.0"
+  }
+}
