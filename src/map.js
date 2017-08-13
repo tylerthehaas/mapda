@@ -1,5 +1,5 @@
 // @flow
-const { _, curry } = require('ramda')
+const { curry } = require('ramda')
 function uncurriedMap(
   cb /*: (v: mixed, i?: number, a?: mixed[]) => mixed*/,
   _target /*: Map<*, *>*/

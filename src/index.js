@@ -1,4 +1,5 @@
 // @flow
+
 const map = require('./map')
 const filter = require('./filter')
 
