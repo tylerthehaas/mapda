@@ -1,3 +1,5 @@
+// @flow
+
 const { expect } = require('chai')
 
 const M = require('../src/index')
