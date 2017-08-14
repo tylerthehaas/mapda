@@ -13,7 +13,8 @@ function uncurriedFold(
 
   if (!initialValue) {
     const mapArr = [ ...inputMap ]
-    const vType = typeof mapArr[0][1]
+    const [ [ , first ] ] = mapArr
+    const vType = typeof first
     const isConsistentType = mapArr.every((v: any) => typeof v[1] === vType)
     if (!isConsistentType) throw new Error('all types in Map must be the same')
     switch (vType) {
@@ -26,7 +27,7 @@ function uncurriedFold(
         break
 
       case 'object':
-        initialValue = Array.isArray(v) ? (v === null ? null : []) : {}
+        initialValue = Array.isArray(first) ? (first === null ? null : []) : {}
         break
 
       case 'string':
