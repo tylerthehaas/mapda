@@ -12,34 +12,34 @@ function uncurriedFold(
     )
 
   if (!initialValue) {
-    inputMap.forEach((v, k, m) => {
-      const vType = typeof v
-      if (![ ...m ].every(v => typeof v[1] === vType)) throw new Error('all types in Map must be the same')
-      switch (vType) {
-        case 'number':
-          initialValue = 0
-          break
+    const mapArr = [ ...inputMap ]
+    const vType = typeof mapArr[0][1]
+    const isConsistentType = mapArr.every((v: any) => typeof v[1] === vType)
+    if (!isConsistentType) throw new Error('all types in Map must be the same')
+    switch (vType) {
+      case 'number':
+        initialValue = 0
+        break
 
-        case 'function':
-          initialValue = () => {}
-          break
+      case 'function':
+        initialValue = () => {}
+        break
 
-        case 'object':
-          initialValue = Array.isArray(v) ? (v === null ? null : []) : {}
-          break
+      case 'object':
+        initialValue = Array.isArray(v) ? (v === null ? null : []) : {}
+        break
 
-        case 'string':
-          initialValue = ''
-          break
+      case 'string':
+        initialValue = ''
+        break
 
-        case 'boolean':
-          initialValue = false
-          break
+      case 'boolean':
+        initialValue = false
+        break
 
-        default:
-          break
-      }
-    })
+      default:
+        break
+    }
   }
 
   let result = initialValue
