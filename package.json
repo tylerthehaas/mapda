@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/haasDev/es6-map-fn.git"
+    "url": "git+https://github.com/haasDev/mapda.git"
   },
   "author": "Tyler Haas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/haasDev/es6-map-fn/issues"
+    "url": "https://github.com/haasDev/mapda/issues"
   },
-  "homepage": "https://github.com/haasDev/es6-map-fn#readme",
+  "homepage": "https://github.com/haasDev/mapda#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-minify": "^0.2.0",
