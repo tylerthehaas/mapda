@@ -6,9 +6,19 @@ const { describe, it } = require('mocha')
 const M = require('../lib/index')
 
 describe('M', () => {
-  it('Should contain all functions in lib', () => {
+  it('Should export map', () => {
     expect(M.map).to.be.an.instanceof(Function)
+  })
+
+  it('Should export filter', () => {
     expect(M.filter).to.be.an.instanceof(Function)
+  })
+
+  it('Should export fold', () => {
     expect(M.fold).to.be.an.instanceof(Function)
+  })
+
+  it('Should export mapToObject', () => {
+    expect(M.mapToObject).to.be.an.instanceof(Function)
   })
 })
