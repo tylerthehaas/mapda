@@ -1,7 +1,7 @@
 {
-  "name": "es6-map-fn",
+  "name": "mapda",
   "version": "1.0.0",
-  "description": "A group of polyfills aimed at enabling working with Maps in a functional way possible.",
+  "description": "A library that makes working with Maps in a functional way possible.",
   "main": "index.js",
   "scripts": {
     "build": "babel src/ -d lib/",
