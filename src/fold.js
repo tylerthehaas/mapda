@@ -45,9 +45,9 @@ function uncurriedFold(
 
   let result = initialValue
 
-  for (const [ k, v ] of inputMap) {
+  inputMap.forEach((v: mixed, k: mixed): void => {
     result = cb(result, v, k)
-  }
+  })
 
   return result
 }

@@ -11,7 +11,7 @@ function uncurriedFilter(
     )
 
   const returnMap = new Map([ ...inputMap ])
-  returnMap.forEach((v: mixed, k: mixed) => {
+  returnMap.forEach((v: mixed, k: mixed): void => {
     if (!predicate(v, k)) {
       returnMap.delete(k)
     }

@@ -10,9 +10,9 @@ function uncurriedMap(
       `1st argument to map must be a function but received ${typeof cb}`
     )
   const target = new Map([ ..._target ])
-  for (const [ k, v ] of target) {
+  target.forEach((v: mixed, k: mixed): void => {
     target.set(k, cb(v, k))
-  }
+  })
   return target
 }
 
