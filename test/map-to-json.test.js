@@ -21,10 +21,24 @@ describe('mapToJson()', () => {
   })
 
   it('Should be correct object', () => {
-    const result = mapToJson(
-      new Map([ [ 'a', 1 ], [ 'b', 2 ], [ 'c', 'c' ], [ 'd', [ 'a', 'b', 'c' ] ] ])
-    )
+    const myMap = new Map([
+      [ 'a', 1 ],
+      [ 'b', 2 ],
+      [ 'c', 'c' ],
+      [ 'd', [ 'a', 'b', 'c' ] ],
+    ])
+    const result = mapToJson(myMap)
     const expected = '{"a":1,"b":2,"c":"c","d":["a","b","c"]}'
     expect(result).to.equal(expected)
+  })
+
+  it('Should throw error if a key is not a string', () => {
+    const myMap = new Map([
+      [ 'a', 1 ],
+      [ { a: 'b' }, 2 ],
+      [ 'c', 'c' ],
+      [ 'd', [ 'a', 'b', 'c' ] ],
+    ])
+    expect(() => mapToJson(myMap)).to.throw()
   })
 })

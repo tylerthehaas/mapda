@@ -7,7 +7,6 @@
     "build": "babel src/ -d lib/",
     "buildw": "babel -q -w src -d lib",
     "flow": "flow",
-    "prepublish": "npm run build",
     "test": "mocha -w"
   },
   "repository": {
