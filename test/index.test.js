@@ -25,4 +25,8 @@ describe('mapda', () => {
   it('Should export objectToMap', () => {
     expect(M.objectToMap).to.be.an.instanceof(Function)
   })
+
+  it('Should export mapToJson', () => {
+    expect(M.mapToJson).to.be.an.instanceof(Function)
+  })
 })

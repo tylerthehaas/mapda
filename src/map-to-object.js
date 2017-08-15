@@ -2,7 +2,7 @@
 
 const fold = require('./fold')
 
-function mapToObject(srcMap: Map<string, *>) {
+function mapToObject(srcMap: Map<string, *>): Object {
   return fold(
     (a: Object, v: mixed, k: string): Object => {
       if (typeof k !== 'string') {
