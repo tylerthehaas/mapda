@@ -6,8 +6,9 @@
   "scripts": {
     "build": "babel src/ -d lib/",
     "buildw": "babel -q -w src -d lib",
+    "minify": "minify lib -d lib",
     "flow": "flow",
-    "test": "mocha -w"
+    "test": "mocha -w test"
   },
   "repository": {
     "type": "git",
@@ -21,6 +22,7 @@
   "homepage": "https://github.com/haasDev/es6-map-fn#readme",
   "devDependencies": {
     "babel-cli": "^6.24.1",
+    "babel-minify": "^0.2.0",
     "babel-preset-flow": "^6.23.0",
     "chai": "^4.1.1",
     "flow-bin": "^0.52.0",

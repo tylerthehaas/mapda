@@ -3,7 +3,7 @@
 const mapToObj = require('./map-to-object')
 
 function mapToJson(srcMap: Map<string, *>): string {
-  srcMap.forEach((k: string) => {
+  srcMap.forEach((v: mixed, k: string) => {
     const typeK = typeof k
     if (typeK !== 'string') {
       throw new Error(
