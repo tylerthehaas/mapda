@@ -4,6 +4,7 @@ const { expect } = require('chai')
 
 const M = require('../lib/index')
 
+const { describe, it } = global
 describe('mapda', () => {
   it('Should export map', () => {
     expect(M.map).to.be.an.instanceof(Function)

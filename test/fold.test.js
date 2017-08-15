@@ -5,6 +5,7 @@ const sinon = require('sinon')
 
 const fold = require('../lib/fold')
 
+const { describe, it } = global
 describe('fold()', () => {
   it('Should import fold as a function', () => {
     expect(fold).to.be.an.instanceof(Function)

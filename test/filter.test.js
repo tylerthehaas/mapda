@@ -4,6 +4,7 @@ const sinon = require('sinon')
 
 const filter = require('../lib/filter')
 
+const { describe, it } = global
 describe('filter()', () => {
   it('Should import filter as a function successfully', () => {
     expect(filter).to.be.an.instanceof(Function)

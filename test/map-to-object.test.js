@@ -4,6 +4,7 @@ const { expect } = require('chai')
 
 const mapToObject = require('../lib/map-to-object')
 
+const { describe, it } = global
 describe('mapToObject()', () => {
   it('Should export', () => {
     expect(mapToObject).to.be.an.instanceOf(Function)

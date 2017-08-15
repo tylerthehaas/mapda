@@ -4,6 +4,7 @@ const sinon = require('sinon')
 
 const map = require('../lib/map')
 
+const { describe, it } = global
 describe('map()', () => {
   it('Should call cb once for every key/value in Map', () => {
     let myMap = new Map([ [ 'foo', 1 ], [ 'bar', 2 ], [ 'baz', 3 ] ])

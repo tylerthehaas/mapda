@@ -1,12 +1,12 @@
 // @flow
 
 const { expect } = require('chai')
-const { describe, it } = global
 const sinon = require('sinon')
 
 const jsonToMap = require('../lib/json-to-map')
-const objToMap = require('../lib/object-to-map')
+// const objToMap = require('../lib/object-to-map')
 
+const { describe, it } = global
 describe('jsonToMap()', () => {
   it('Should be exported', () => {
     expect(jsonToMap).to.be.an.instanceOf(Function)
