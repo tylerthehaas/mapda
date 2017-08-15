@@ -5,7 +5,7 @@ const { describe, it } = require('mocha')
 
 const M = require('../lib/index')
 
-describe('M', () => {
+describe('mapda', () => {
   it('Should export map', () => {
     expect(M.map).to.be.an.instanceof(Function)
   })

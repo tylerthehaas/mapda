@@ -2,6 +2,7 @@
 
 const { curry } = require('ramda')
 
+/** @todo change this to make initial value required */
 function uncurriedFold(
   cb: (accumulator: mixed, currentValue: mixed, currentKey?: mixed) => mixed,
   inputMap: Map<*, *>,
