@@ -4,7 +4,6 @@ const { expect } = require('chai')
 const sinon = require('sinon')
 
 const jsonToMap = require('../lib/json-to-map')
-const objToMap = require('../lib/object-to-map')
 
 const { describe, it } = global
 describe('jsonToMap()', () => {
