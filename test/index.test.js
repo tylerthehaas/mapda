@@ -1,7 +1,6 @@
 // @flow
 
 const { expect } = require('chai')
-const { describe, it } = require('mocha')
 
 const M = require('../lib/index')
 
@@ -28,5 +27,9 @@ describe('mapda', () => {
 
   it('Should export mapToJson', () => {
     expect(M.mapToJson).to.be.an.instanceof(Function)
+  })
+
+  it('Should export mapToJson', () => {
+    expect(M.jsonToMap).to.be.an.instanceof(Function)
   })
 })

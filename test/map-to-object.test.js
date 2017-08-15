@@ -1,7 +1,6 @@
 // @flow
 
 const { expect } = require('chai')
-const { describe, it } = require('mocha')
 
 const mapToObject = require('../lib/map-to-object')
 
