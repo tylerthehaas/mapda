@@ -1,6 +1,6 @@
 {
   "name": "mapda",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "A library that makes working with Maps in a functional way possible.",
   "main": "index.js",
   "scripts": {
