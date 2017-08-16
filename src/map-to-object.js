@@ -1,9 +1,9 @@
 // @flow
 
-const fold = require('./fold')
+const reduce = require('./reduce')
 
 function mapToObject(srcMap: Map<string, *>): Object {
-  return fold(
+  return reduce(
     (a: Object, v: mixed, k: string): Object => {
       if (typeof k !== 'string') {
         throw new Error(
