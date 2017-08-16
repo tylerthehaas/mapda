@@ -5,7 +5,7 @@ const { curry } = require('ramda')
 /** @todo change this to make initial value required */
 function uncurriedReduce(
   cb: (accumulator: mixed, currentValue: mixed, currentKey?: mixed) => mixed,
-  initialValue: mixed = undefined,
+  initialValue: mixed,
   inputMap: Map<*, *>
 ): mixed {
   if (typeof cb !== 'function') throw new Error(

@@ -13,8 +13,8 @@ function mapToObject(srcMap: Map<string, *>): Object {
       a[k] = v
       return a
     },
-    srcMap,
-    {}
+    {},
+    srcMap
   )
 }
 
