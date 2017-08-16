@@ -3,7 +3,7 @@
 const { curry } = require('ramda')
 
 /** @todo change this to make initial value required */
-function uncurriedFold(
+function uncurriedReduce(
   cb: (accumulator: mixed, currentValue: mixed, currentKey?: mixed) => mixed,
   inputMap: Map<*, *>,
   initialValue?: mixed = undefined
@@ -53,6 +53,6 @@ function uncurriedFold(
   return result
 }
 
-const fold = curry(uncurriedFold)
+const reduce = curry(uncurriedReduce)
 
-module.exports = fold
+module.exports = reduce
